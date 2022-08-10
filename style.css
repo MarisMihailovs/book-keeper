@@ -45,6 +45,7 @@ h1:hover {
 
 .item {
   background-color: rgba(126, 126, 126, 0.5);
+  position: relative;
   color: white;
   border-radius: var(--border-radius);
   padding: 20px;
@@ -80,19 +81,17 @@ a:active {
 }
 
 .name {
-  margin-top: 20px;
-  margin-right: 20px;
   display: flex;
   align-items: center;
 }
 
 .material-symbols-outlined {
-  float: right;
-  margin: auto;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  margin: 2px;
   cursor: pointer;
   user-select: none;
-  cursor: pointer;
-  z-index: 2;
   font-size: 15px;
   font-variation-settings:
     'FILL' 0,
@@ -128,16 +127,14 @@ a:active {
 }
 
 .close-icon {
-  float: right;
   color: white;
   font-size: 20px;
-  top: 13px;
-  right: 13px;
   cursor: pointer;
   margin: 16px;
 }
 
 .modal-header {
+  position: relative;
   background: var(--primary-color);
   color: white;
   padding: 15px;
