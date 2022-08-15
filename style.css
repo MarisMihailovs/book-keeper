@@ -141,12 +141,12 @@ a:active {
   background-color: rgba(39, 39, 39, 0.5);
   width: 20px;
   height: 20px;
+
 }
 
 .delete:hover {
-  background-color: white;
-  color: black;
-  scale: 1.5;
+  animation: deleteSelected 0.5s;
+  animation-fill-mode: forwards;
 }
 
 .close-icon {
@@ -215,12 +215,25 @@ button:focus {
   outline: none;
 }
 
+@keyframes deleteSelected {
+  from {
+    scale: 1;
+  }
+
+  to {
+    background-color: white;
+    color: black;
+    scale: 1.2;
+  }
+}
+
 @keyframes modalopen {
   from {
     opacity: 0;
   }
 
   to {
+
     opacity: 1;
   }
 }
